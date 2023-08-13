@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
 
 type AppProviderProps = {
@@ -5,5 +6,5 @@ type AppProviderProps = {
 };
 
 export const AppProvider = ({ children }: AppProviderProps): JSX.Element => {
-  return <>{children}</>;
+  return <BrowserRouter basename="/">{children}</BrowserRouter>;
 };
