@@ -1,6 +1,7 @@
 import { Shadows, createTheme, darken } from "@mui/material";
 
 import { colors } from "./colors";
+import { sizes } from "./sizes";
 
 const _theme = createTheme();
 
@@ -9,6 +10,7 @@ export const theme = createTheme({
   shape: {
     borderRadius: 2,
   },
+  sizes,
   palette: {
     mode: "dark",
     primary: {
