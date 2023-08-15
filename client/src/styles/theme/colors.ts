@@ -1,4 +1,6 @@
-export const colors = {
+type Colors = { [key: string]: string };
+
+export const colors: Colors = {
   bg: "#131817",
   primary: "#28CD88",
   secondary: "#f066a0",
