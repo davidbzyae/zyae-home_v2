@@ -1,3 +1,3 @@
 export * from "./elements";
 export * from "./layout";
-export * from "./muiElements";
+export * from "./styled";
