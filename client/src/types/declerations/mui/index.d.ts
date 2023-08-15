@@ -22,3 +22,8 @@ declare module "@mui/material/styles" {
     accent: PaletteColor;
   }
 }
+declare module "@mui/material/IconButton" {
+  interface IconButtonPropsColorOverrides {
+    accent: true;
+  }
+}
