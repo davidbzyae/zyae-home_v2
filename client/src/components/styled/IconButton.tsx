@@ -1,4 +1,4 @@
-import { alpha, styled } from "@mui/material";
+import { CSSObject, alpha, styled } from "@mui/material";
 import { colors, theme } from "@/styles";
 
 import MuiIconButton from "@mui/material/IconButton";
@@ -28,7 +28,7 @@ export const IconButton = styled(
   variant = variant || "default";
   color = color || "accent";
 
-  const styles = [];
+  const styles: CSSObject[] = [];
 
   if (variant === "translucent") styles.push(translucentStyle(colors[color]));
   return styles;
