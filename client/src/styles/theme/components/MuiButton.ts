@@ -26,6 +26,8 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
           height: sizes[size],
           borderRadius: sizes[size] / 2,
 
+          whiteSpace: "nowrap",
+
           "&.Mui-disabled": {
             color: lighten(colors.bg, 0.5),
           },
