@@ -1,14 +1,17 @@
-import { Shadows, createTheme, darken } from "@mui/material";
+import { MuiButton, MuiButtonBase, MuiIconButton } from "./components";
+import { createTheme, darken } from "@mui/material";
 
 import { colors } from "./colors";
 import { sizes } from "./sizes";
 
+export { colors } from "./colors";
+export { sizes } from "./sizes";
+
 const _theme = createTheme();
 
 export const theme = createTheme({
-  shadows: Array(25).fill("none") as Shadows,
   shape: {
-    borderRadius: 2,
+    borderRadius: sizes.medium / 2,
   },
   sizes,
   palette: {
@@ -31,6 +34,16 @@ export const theme = createTheme({
     },
     background: {
       default: colors.bg,
+    },
+  },
+  components: {
+    MuiButtonBase,
+    MuiButton,
+    MuiIconButton,
+    MuiAppBar: {
+      defaultProps: {
+        elevation: 0,
+      },
     },
   },
 });
