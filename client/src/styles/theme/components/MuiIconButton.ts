@@ -28,6 +28,7 @@ export const MuiIconButton: Components<Theme>["MuiIconButton"] = {
     },
   },
   defaultProps: {
+    color: "accent",
     centerRipple: false,
   },
 };
