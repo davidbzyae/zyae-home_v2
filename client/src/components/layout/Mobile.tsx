@@ -59,7 +59,7 @@ const AccountControls = (): JSX.Element => {
                 </ListItemIcon>
                 Notifications
               </MenuItem>
-              <MenuItem onClick={handleLogOut}>
+              <MenuItem onClick={handleLogOut} color="error">
                 <ListItemIcon>
                   <FlaticonIcon icon="fi fi-rr-exit" />
                 </ListItemIcon>
