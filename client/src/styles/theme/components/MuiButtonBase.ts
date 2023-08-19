@@ -19,7 +19,7 @@ export const MuiButtonBase: Components<Theme>["MuiButtonBase"] = {
           left: 0,
           width: "100%",
           height: "100%",
-          borderRadius: `${sizes["large"] / 2}px`,
+          borderRadius: "inherit",
           opacity: 0.25,
         },
 
