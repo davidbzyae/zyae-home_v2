@@ -5,5 +5,5 @@ export const colors: Colors = {
   primary: "#28CD88",
   secondary: "#f066a0",
   accent: "#D4F5E7",
-  error: "#F44336",
+  error: "#f7584d",
 };
