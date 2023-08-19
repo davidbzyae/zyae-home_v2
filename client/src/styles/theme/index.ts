@@ -61,5 +61,16 @@ export const theme = createTheme({
         elevation: 1,
       },
     },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          padding: 6,
+
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+        },
+      },
+    },
   },
 });
