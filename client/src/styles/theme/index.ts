@@ -1,5 +1,5 @@
 import { MuiButton, MuiButtonBase, MuiIconButton } from "./components";
-import { createTheme, darken } from "@mui/material";
+import { createTheme, darken, lighten } from "@mui/material";
 
 import { colors } from "./colors";
 import { sizes } from "./sizes";
@@ -43,6 +43,22 @@ export const theme = createTheme({
     MuiAppBar: {
       defaultProps: {
         elevation: 0,
+      },
+    },
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          background: lighten(colors.bg, 0.05),
+
+          border: `solid 1px ${lighten(colors.bg, 0.15)}`,
+          borderRadius: 12,
+        },
+        root: {
+          marginTop: 4,
+        },
+      },
+      defaultProps: {
+        elevation: 1,
       },
     },
   },
