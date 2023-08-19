@@ -1,4 +1,9 @@
-import { MuiButton, MuiButtonBase, MuiIconButton } from "./components";
+import {
+  MuiButton,
+  MuiButtonBase,
+  MuiIconButton,
+  MuiMenuItem,
+} from "./components";
 import { createTheme, darken, lighten } from "@mui/material";
 
 import { colors } from "./colors";
@@ -72,13 +77,6 @@ export const theme = createTheme({
         },
       },
     },
-    MuiMenuItem: {
-      styleOverrides: {
-        root: {
-          height: sizes["medium"],
-          borderRadius: sizes["medium"] / 2,
-        },
-      },
-    },
+    MuiMenuItem,
   },
 });
