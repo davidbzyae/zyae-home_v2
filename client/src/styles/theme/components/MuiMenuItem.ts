@@ -9,7 +9,7 @@ export const MuiMenuItem: Components<Theme>["MuiMenuItem"] = {
       const styles = [
         theme.unstable_sx({
           height: sizes["medium"],
-          borderRadius: sizes["medium"] / 2,
+          borderRadius: `${sizes["medium"] / 2}px`,
 
           color,
           "*": {
