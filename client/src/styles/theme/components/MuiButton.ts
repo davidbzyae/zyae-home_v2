@@ -24,8 +24,11 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
         theme.unstable_sx({
           padding: { small: 1, medium: 1.5, large: 2 }[size],
           height: sizes[size],
-          borderRadius: sizes[size] / 2,
 
+          display: "flex",
+          gap: 1,
+
+          borderRadius: sizes[size] / 2,
           whiteSpace: "nowrap",
 
           "&.Mui-disabled": {
