@@ -8,7 +8,7 @@ const Icon = styled("i")({
 
 type FlaticonIconProps = React.ComponentProps<typeof Icon> & {
   icon: string;
-  size?: string;
+  size?: number;
 };
 
 export const FlaticonIcon = (props: FlaticonIconProps) => {
