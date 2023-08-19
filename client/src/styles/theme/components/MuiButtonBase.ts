@@ -20,7 +20,7 @@ export const MuiButtonBase: Components<Theme>["MuiButtonBase"] = {
           width: "100%",
           height: "100%",
           borderRadius: `${sizes["large"] / 2}px`,
-          opacity: 0.5,
+          opacity: 0.25,
         },
 
         "&:focus": {
