@@ -72,5 +72,13 @@ export const theme = createTheme({
         },
       },
     },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          height: sizes["medium"],
+          borderRadius: sizes["medium"] / 2,
+        },
+      },
+    },
   },
 });
