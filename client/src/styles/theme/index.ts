@@ -51,7 +51,7 @@ export const theme = createTheme({
           background: lighten(colors.bg, 0.05),
 
           border: `solid 1px ${lighten(colors.bg, 0.15)}`,
-          borderRadius: 12,
+          borderRadius: sizes["medium"] / 2,
         },
         root: {
           marginTop: 4,
