@@ -11,6 +11,7 @@ const StyledIcon = styled(Icon)(({ size }: StyledIconProps) => {
     "> img": {
       display: "block",
       aspectRatio: "1 / 1",
+      height: size,
     },
     overflow: "visible",
     textAlign: "center",
