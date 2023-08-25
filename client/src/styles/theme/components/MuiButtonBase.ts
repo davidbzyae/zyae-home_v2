@@ -1,7 +1,6 @@
 import { Components, Theme } from "@mui/material";
 
 import { outlineFlash } from "../animations";
-import { sizes } from "..";
 
 export const MuiButtonBase: Components<Theme>["MuiButtonBase"] = {
   styleOverrides: {
