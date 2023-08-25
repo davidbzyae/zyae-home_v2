@@ -66,6 +66,20 @@ export const theme = createTheme({
         elevation: 1,
       },
     },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          padding: 16,
+          background: lighten(colors.bg, 0.05),
+
+          border: `solid 1px ${lighten(colors.bg, 0.15)}`,
+          borderRadius: sizes["medium"] / 2,
+        },
+        root: {
+          marginTop: 4,
+        },
+      },
+    },
     MuiList: {
       styleOverrides: {
         root: {
