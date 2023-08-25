@@ -13,15 +13,16 @@ import { Link, SvgIcon } from "@/components";
 import { createSession, createUser, getGoogleAuthUrl } from "../api";
 
 import axios from "axios";
-import { setUser } from "@/stores";
 import { theme } from "@/styles";
-import { useAppDispatch } from "@/hooks";
+import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
 export const SignUp = () => {
-  const dispatch = useAppDispatch();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [signUpError, setSignUpError] = useState<null | string>(null);
+
+  const [searchParams] = useSearchParams();
+  const rd = searchParams.get("rd");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ export const SignUp = () => {
         email,
         password,
       });
-      document.location.href = "/";
+      document.location.href = rd || "/";
     } catch (err) {
       if (axios.isAxiosError(err)) {
         if (err.response?.status === 409) {
@@ -59,7 +60,7 @@ export const SignUp = () => {
   };
 
   const handleGoogleClick = async () => {
-    const authUrl = await getGoogleAuthUrl();
+    const authUrl = await getGoogleAuthUrl(rd);
 
     document.location.href = authUrl;
   };

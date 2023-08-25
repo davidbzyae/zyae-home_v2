@@ -14,11 +14,15 @@ import { createSession, getGoogleAuthUrl } from "../api";
 
 import axios from "axios";
 import { theme } from "@/styles";
+import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
 export const LogIn = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [logInError, setLogInError] = useState<null | string>(null);
+
+  const [searchParams] = useSearchParams();
+  const rd = searchParams.get("rd");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,7 +35,7 @@ export const LogIn = () => {
 
     try {
       await createSession(userData);
-      document.location.href = "/";
+      document.location.href = rd || "/";
     } catch (err) {
       if (axios.isAxiosError(err)) {
         if (err.response?.status === 401) {
@@ -50,7 +54,7 @@ export const LogIn = () => {
   };
 
   const handleGoogleClick = async () => {
-    const authUrl = await getGoogleAuthUrl();
+    const authUrl = await getGoogleAuthUrl(rd);
 
     document.location.href = authUrl;
   };
