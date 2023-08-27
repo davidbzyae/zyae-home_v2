@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "zyae.net",
-    port: 3000,
+    port: 3001,
     https: {
       key: fs.readFileSync(httpsConfig.key),
       cert: fs.readFileSync(httpsConfig.cert),
