@@ -43,7 +43,7 @@ export const useTokenService = () => {
     );
 
     return () => clearInterval(refreshInterval);
-  });
+  }, []);
 
   return { status };
 };
